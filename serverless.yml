@@ -1,0 +1,13 @@
+service: my-service
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-south-1
+
+functions:
+  kinesisStreamProcessor:
+    handler: index.handler
+    description: My kinesis-processor function
+    memorySize: 256
+    timeout: 30
